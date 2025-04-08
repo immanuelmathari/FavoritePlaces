@@ -97,3 +97,21 @@ PlaceForm.js
 - show a preview of that photo
 - so we also set state for the TextInput
 - you need to know that if changeTitleHandler is the onChangeText function for TextInput, that function changeTitleHandler will receiver a default prop from react native enteredText. but im not sure about this. it might be because of our useState
+
+## 12.196 Adding & Configuring the Camera Package (for Native Camera Access)
+create 
+components/Places/
+ImagePicker.js
+- we open the camera,
+- show a button to allow taking the picture
+expo camera
+expo location 
+expo storage
+https://docs.expo.dev/versions/latest/sdk/camera/
+https://docs.expo.dev/versions/latest/sdk/imagepicker/
+> expo install expo-image-picker 
+- we need to register permisions
+you add plugins to app.json that you find in the dos
+- we want to open the camera so we use plugin cameraPermission
+"cameraPermission": "The app accesses your camera to take photos of your favorite places."
+NOTE) Say this is something you can do
