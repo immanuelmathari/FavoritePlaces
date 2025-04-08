@@ -57,3 +57,23 @@ AddPlaces.js
 App.js
 - we need navigationContainer and createNativeStackNavigator
 - remember that every screen receives a name
+
+## 12.193 Adding a Header Buttons
+App.js
+- we want to have a plus button in AllPlaces to go to addPlaces
+- never forget that tintColor is what we get as a default prop
+- we need to add an icon
+create components/UI/
+IconButton.js
+- when building reusable components, we have things that we must add onto it from the place its being used thats why we use props. props is like saying we take this data from where this component will be used and bring it here to build it
+- in the view the values that belong to this place say in onPress are the ones on the left. what we bring in is on the right
+- we use this reusable component in App.js
+App.js
+- so where we use the reusable component, we need to pass data that will go and feed the componenet ili iijenge . the component is like the skeleton and the data we give it is like the meat. so like app says, on its left hii ndio unataka and on its right we give it.
+- at this point, we need to have access to navigation so that we can navigate to that place. 
+so we turn the options into a function
+when its like this
+{( ) =>
+we get an object from here we need to destructure it
+so we add the {( {} )}
+- remember that we use onPressOut in the navigations
