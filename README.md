@@ -76,4 +76,16 @@ when its like this
 {( ) =>
 we get an object from here we need to destructure it
 so we add the {( {} )}
-- remember that we use onPressOut in the navigations
+
+
+## 12.194 Global Colors and Styling
+App.js 
+@options - title 
+we create constants/
+colors.js
+App.js 
+@Stack.Navigator 
+- to change background
+- whenever we want to make a change affecting all screens we do it in Stack.Navigator
+PlacesList.js
+@fallbackTex
