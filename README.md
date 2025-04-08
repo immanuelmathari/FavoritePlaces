@@ -21,3 +21,26 @@ place.js
 - this will be our constructor
 PlacesList.js
 - renderItem is what points to the function that will be executed when the list is called. yani, how each list will be outputted
+
+## 12.191 Editing the Favorite Places List
+PlacesList.js
+@FlatList renderItem
+- we get every element as an object
+renderItem={({item})}
+create 
+components/PlaceItem.js
+PlaceItem.js just write starter code
+PlaceList.js 
+@FlatList renderItem, item will be an object that carries the data in place.js
+PlaceItem.js
+- we work on the structure of the return 
+- add the prop place because we have to be expecting it as we pass it from PlacesList at the FlatList.
+- this is an object
+- we need to pass on a function that should be executed when Pressable is clicked
+- we need to foward the value we get from the prop to the onPress in Pressable
+- add the styles
+PlacesList.js
+- we add fall back test @!places || ..
+- style
+- with this two, we use them in 
+AllPlaces.js
