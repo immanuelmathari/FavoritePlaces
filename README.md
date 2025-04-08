@@ -89,3 +89,11 @@ App.js
 - whenever we want to make a change affecting all screens we do it in Stack.Navigator
 PlacesList.js
 @fallbackTex
+
+## 12.195 Getting Started with a custom Form
+PlaceForm.js
+- We want to get a title for every place 
+- allow a user to take photos
+- show a preview of that photo
+- so we also set state for the TextInput
+- you need to know that if changeTitleHandler is the onChangeText function for TextInput, that function changeTitleHandler will receiver a default prop from react native enteredText. but im not sure about this. it might be because of our useState
