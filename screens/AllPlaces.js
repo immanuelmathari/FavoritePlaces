@@ -4,4 +4,4 @@ function AllPlaces(){
     return <PlacesList />;
 }
 
-export default AllPlaces();
+export default AllPlaces;

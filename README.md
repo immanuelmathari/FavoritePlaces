@@ -44,3 +44,16 @@ PlacesList.js
 - style
 - with this two, we use them in 
 AllPlaces.js
+
+## 12.192 Adding a add place screen + Navigation
+AddPlace.js
+- we want to return an interface to allow us to add a new place
+create components/
+PlaceForm.js
+- go add it in the 
+AddPlaces.js
+- we want to add navigation
+> npm install @react-navigation/native @react-navigation/native-stack
+App.js
+- we need navigationContainer and createNativeStackNavigator
+- remember that every screen receives a name
