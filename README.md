@@ -355,3 +355,14 @@ Map.js
 - then we save them i a state @selectedLocation state
 - then we add a @Marker inside MapView
 - we render this marker conditionally when we have this marker
+
+## 12.206 Confirming Picked Locations and going back with the location or alerting when there is none
+Map.js
+@savePickedLocationHandler()
+- okay, if its not a screen component, use useNavigation if it is, add a prop {navigation}
+- we see how to add parameters as we pass from screen to screen. we use this to pass the data we picked
+- so we add a button that can add the location
+- we use headerOptions, we use useLayoutEffect. - this allows us to run some code when this component is rendered for the first time
+- after adding the useLayoutEffect, we realise that we risk running into an infinite loop because at the dependancies we are passing a function TODO research on this NOTE so what we do is we wrap the savePickedLocationHandler with reacts useCallback hook
+- useCallback ensures that a function is not recreated un-necessarily
+- so its whenever this changes [navigation, selectedLocation] that we call that function savePickedLocationHandler
