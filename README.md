@@ -325,3 +325,24 @@ we use it in
 LocationPicker.js 
 @mapPreview
 @pickedLocation state
+
+## 12.204 Adding an interactive Map
+- we want to add a full screen map when the pick on map is pressed
+Map.js
+- we use expo-maps
+https://docs.expo.dev/versions/latest/sdk/map-view/
+> npx expo install react-native-maps
+
+TODO i keep getting this warning 
+https://docs.expo.dev/guides/new-architecture/
+
+- we use MapView and we also need a marker using initialRegion to control the region shown when the map first loads
+
+App.js 
+- register a new screen to get here
+- we navigate to it through LocationPicker.js
+LocationPicker.js
+@pickOnMapHandler
+- remember because LocationPicker is not a screen component, we have to add the navigation prop or use useNavigation
+- we now need to add styles to see it flex 1
+Map.js

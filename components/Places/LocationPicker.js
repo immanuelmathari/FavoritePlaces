@@ -4,9 +4,11 @@ import { Colors } from "../../constants/colors";
 import { getCurrentPositionAsync, useForegroundPermissions, PermissionStatus } from "expo-location";
 import { useState } from "react";
 import { getMapPreview } from "../../util/location";
+import { useNavigation } from "@react-navigation/native";
 
 function LocationPicker() {
     const [pickedLocation, setPickedLocation] = useState();
+    const navigation = useNavigation();
     const [locationPermissionInformation, requestPermission] = useForegroundPermissions();
     async function verifyPermissions() {
         if(locationPermissionInformation.status === PermissionStatus.UNDETERMINED) {
@@ -49,7 +51,9 @@ function LocationPicker() {
 
     }
 
-    function pickOnMapHandler() { }
+    function pickOnMapHandler() {
+        navigation.navigate('Map');
+     }
 
     let locationPreview = <Text>No Location picked yet.</Text>
 
@@ -65,7 +69,7 @@ function LocationPicker() {
                 {locationPreview}
             </View>
             <View style={styles.action}>
-                <OutlinedButton onPress={getLocationHandler} icon="location">Locate User</OutlinedButton>
+                <OutlinedButton onPress={getLocationHandler} icon="location">Find My Location</OutlinedButton>
                 <OutlinedButton onPress={pickOnMapHandler} icon="map">Pick on Map</OutlinedButton>
             </View>
         </View>
@@ -82,7 +86,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: Colors.primary100,
-        borderRadius: 4,
+        overflow: 'hidden'
     },
     action: {
         flexDirection: 'row',
@@ -94,5 +98,6 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: '100%',
+        borderRadius: 4,
     }
 })
