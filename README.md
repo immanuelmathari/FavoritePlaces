@@ -376,3 +376,10 @@ LocationPicker.js
 @useEffect
 - you need to know that say when we go from AppPlace to Map to set a map through a stack Navigation the map is placed ontop of AddPlace but when we go back we dont get what we had in Map component. 
 - so we cant use useEffect because there was no rerender. so  we use useIsFocused() this hook returns a boolean true if the screen is focused else false. so when we move from appPlace to Map screen this return false. so this isFocused will be false when we switch to map screen and true when we come from the map
+
+## 12.208 Adding a Form Submit Button
+create
+Ui/
+Button.js
+- we use this button in
+PlaceForm.js
