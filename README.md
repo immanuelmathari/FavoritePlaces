@@ -295,3 +295,33 @@ we inport getCurrentPositionAsync
 - this is where we use useForegroundPermissions
 - now we use this in 
 @getLocationHandler
+
+## 12.203 Adding a preview location map
+- we use this api
+https://developers.google.com/maps/documentation/maps-static/overview
+
+Go to Get Started > and create a project
+https://console.cloud.google.com/google/maps-apis/home?project=react-native-myfavoriteapp&invt=AbuSwA
+
+- we get api key for that and then 
+
+create
+util/
+location.js
+- we paste the google maps api and refactor it from 
+
+https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=YOUR_API_KEY&signature=YOUR_SIGNATURE
+
+- we change the size
+
+to 
+
+https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=13&size=400x2&maptype=roadmap&markers=color:red%7Clabel:S%7C${latitude},${longitude}&key=${GOOGLE_API_KEY}
+
+we use it in
+LocationPicker.js 
+@mapPreview
+@pickedLocation state
