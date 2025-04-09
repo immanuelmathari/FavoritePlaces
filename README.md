@@ -278,3 +278,20 @@ useEffect(() => {
 
 we use it in 
 PlaceForm.js
+
+## 12.202 Locating Users
+- we want to get location  of the users
+
+https://docs.expo.dev/versions/latest/sdk/location/
+
+> npx expo install expo-location
+- in some apps, not that you'd require to get location while its in the background
+
+LocationPicker.js
+we inport getCurrentPositionAsync
+@LocationPicker
+- we say we need to get permission
+@verifyPermissions
+- this is where we use useForegroundPermissions
+- now we use this in 
+@getLocationHandler
