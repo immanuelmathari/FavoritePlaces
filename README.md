@@ -346,3 +346,12 @@ LocationPicker.js
 - remember because LocationPicker is not a screen component, we have to add the navigation prop or use useNavigation
 - we now need to add styles to see it flex 1
 Map.js
+
+## 12.205 Allowing Map Interaction & Adding Markers
+- we want to know and detect when the user clicks a place
+Map.js
+- the MapView can give us those coordinates
+- we use the @selectedLocationHandler
+- then we save them i a state @selectedLocation state
+- then we add a @Marker inside MapView
+- we render this marker conditionally when we have this marker
