@@ -366,3 +366,13 @@ Map.js
 - after adding the useLayoutEffect, we realise that we risk running into an infinite loop because at the dependancies we are passing a function TODO research on this NOTE so what we do is we wrap the savePickedLocationHandler with reacts useCallback hook
 - useCallback ensures that a function is not recreated un-necessarily
 - so its whenever this changes [navigation, selectedLocation] that we call that function savePickedLocationHandler
+
+## 12.207 Previewing Picked Locations
+LocationPicker.js
+- we want to set if the user decided to pick a random location instead
+- we want to get data provided by Maps here we use useNavigation we could also useRoute
+@route useRoute
+- we want in @mapPickedLocation to set what we put in pickedLat
+@useEffect
+- you need to know that say when we go from AppPlace to Map to set a map through a stack Navigation the map is placed ontop of AddPlace but when we go back we dont get what we had in Map component. 
+- so we cant use useEffect because there was no rerender. so  we use useIsFocused() this hook returns a boolean true if the screen is focused else false. so when we move from appPlace to Map screen this return false. so this isFocused will be false when we switch to map screen and true when we come from the map

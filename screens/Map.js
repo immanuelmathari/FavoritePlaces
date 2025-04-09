@@ -16,7 +16,7 @@ function Map({navigation}){
         const latitude = event.nativeEvent.coordinate.latitude;
         const longitude = event.nativeEvent.coordinate.longitude;
         
-        setSelectedLocation({lat: latitude, lng: longitude });
+        setSelectedLocation({latitude: latitude, longitude: longitude });
     }
 
     // function savePickedLocationHandler() {
@@ -37,8 +37,8 @@ function Map({navigation}){
             return;
         }
         navigation.navigate('AddPlace', {
-            pickedLat: selectedLocation.lat,
-            pickedLng: selectedLocation.lng,
+            pickedLat: selectedLocation.latitude,
+            pickedLng: selectedLocation.longitude,
         });
 
     }, [navigation, selectedLocation]);
