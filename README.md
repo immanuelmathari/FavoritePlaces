@@ -260,3 +260,11 @@ useEffect(() => {
  or simply remove this developer option. my friend i went for this option..
 
  but id like you to set it back and go to apps where the same feature of launching an app is needed and see what happens to other apps
+
+ ## 12.200 Creating a Custom Button
+ create 
+ Ui/
+ OutlineButton.js
+ - we use this button in 
+ ImagePicker
+ where there was @Button -> OutlinedButton
