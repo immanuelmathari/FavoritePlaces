@@ -383,3 +383,18 @@ Ui/
 Button.js
 - we use this button in
 PlaceForm.js
+
+## 12.209 Managing Location & Image State in the Form
+PlaceForm.js
+be keen much more dont loose track of what we tryna do
+@ImagePicker and LocationPicker we add onTakeImage and onPickLocation. these are to help us to pass data from ImagePicker and LocationPicker back to placeform so we can have these props
+- then we add @takeImageHandler and @pickLocationHandler and add states selectedImage and pickedLocation
+- we go make sure that these functions are called from these components
+ImagePicker.js
+we add @onTakeImage at @launchCameraAsync undersand that we want to manage this image externaly so we want to call onTakeImage whenever an image is taken. we are trying to pass it back.
+LocationPicker.js
+- here we just add another effect when that state pickedLocation changes
+- we need to wrap pickedLocationHandler with a useCallback effect to avoid unnecessary renders
+- all this was to help us have the functions takeImageHandler and pickLocationHandler when the user takes a photo or picks a location
+- the purpose is to have our data in place form from everywhere we get it from
+- now at savePlaceHandler we get all our data imagine
