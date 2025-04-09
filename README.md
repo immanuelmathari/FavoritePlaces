@@ -268,3 +268,13 @@ useEffect(() => {
  - we use this button in 
  ImagePicker
  where there was @Button -> OutlinedButton
+
+ ## 12.201 Location Picker
+ create
+ Places/
+ LocationPicker.js
+  
+  NOTE) when we say flex row we are saying that we want the buttons to sit on the same row
+
+we use it in 
+PlaceForm.js
