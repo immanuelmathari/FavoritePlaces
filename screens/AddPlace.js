@@ -6,9 +6,10 @@ function AddPlaces({navigation}) {
         // insert into DB 
         // for now we just pass this data to display it without saving
         await insertPlace(place);
-        navigation.navigate('AllPlaces', {
-            place: place
-        })
+        // navigation.navigate('AllPlaces', {
+        //     place: place
+        // })
+        navigation.navigate('AllPlaces')
     }
     return <PlaceForm onCreatePlace={createPlaceHandler} />
 }

@@ -473,3 +473,24 @@ database.js
 ## 12.216 Inserting Places(records) into the database
 AddPlace.js
 @createPlaceHandler
+
+## 12.217 Fetching Places in the Database
+database.js
+@fetchPlaces
+AllPlace.js
+@useEffect for setting up the database
+- when we know that this screen is focused, we want to get the latest data/fetch data
+AddPlace.js
+- remove navigation dependancy that was carrying our data initially
+
+- now we want to convert our data into an array datapoints
+
+GPT:
+With the new API, the query result from getAllAsync is an array of row objects. You can simply map over that array and create your Place objects. 
+
+then in 
+AllPlaces.js
+we set our places like that at the 
+@useEffect
+
+- but i feel like the way it was was just okay

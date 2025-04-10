@@ -7,11 +7,13 @@ export class Place {
     //     this.location = location;
     //     this.id = new Date().toString() + Math.random().toString();
     // }
-    constructor(title, imageUri, location) {
+    constructor(title, imageUri, location, id) {
+        // we add id for the database
         this.title = title;
         this.imageUri = imageUri;
         this.address = location.address;
         this.location = { latitude: location.latitude, longitude: location.longitude};
-        this.id = new Date().toString() + Math.random().toString();
+        // this.id = new Date().toString() + Math.random().toString();
+        this.id = id;
     }
 }
