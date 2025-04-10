@@ -438,3 +438,6 @@ AddPlace.js
 AllPlaces.js
 - we want to get that data we are passing
 - and then AllPlaces fowards data to PlaceList.js
+
+## 12.213 Styling Place Items
+PlaceItem.js
