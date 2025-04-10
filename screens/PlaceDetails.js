@@ -10,7 +10,10 @@ function PlaceDetails({ route, navigation }) {
     const selectedPlaceId = route.params.placeId;
 
     function showOnMapHandler() {
-
+        navigation.navigate('Map', {
+            initialLatitude: fetchedPlace.location.latitude,
+            initialLongitude: fetchedPlace.location.longitude,
+        });
     }
 
     useEffect(() => {

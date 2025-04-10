@@ -230,7 +230,14 @@ export async function fetchPlaceDetails(id) {
         // Log the result (for debugging)
         console.log('Fetched place details:', result);
 
-        return result; 
+        const place= new Place(
+            result.title,
+            result.imageUri,
+              { latitude: result.latitude, longitude: result.longitude, address: result.address },
+              result.id
+            )
+
+        return place; 
     } catch (error) {
         console.error('Error fetching place details:', error);
         throw error;

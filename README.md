@@ -525,3 +525,20 @@ then in
 PlaceDetails.js
 - we set the values
 - we also add an ifcheck to see if data isset if !fetchedPlace
+
+## 12.220 Showing a readonly map
+PlaceDetails.js
+@showonMapHandler
+- we open the map
+- so set the marker,
+Map.js
+@initialLocation
+- we override region if we have a location
+- and we set the marker to use the initial location througn the selectedLocation state
+- then the if initialLocation isset in the 
+@useLayoutEffect, we dont put the save 
+- now we want to set the route parameters used in Map.js
+in
+PlaceDetails.js
+@showonMapHandler and the navigate we set route parameters
+- we need to go set the fetchPlaceDetails result to our constructor Place object
