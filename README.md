@@ -465,3 +465,7 @@ expo-app-loading is deprecated in favor of expo-splash-screen: use SplashScreen.
 Expo SDK 52 introduced breaking changes in how SQLite is accessed. The new openDatabaseAsync() method returns a promise, so the database you're currently assigning isn't actually the database itself, but a pending promise.
 
 That’s why database.transaction is undefined — you're trying to call .transaction() on a Promise, not the actual database instance.
+
+## 12.215 Inserting Data into Expo SQL 52
+database.js
+- we use ? to insert dynamic data
