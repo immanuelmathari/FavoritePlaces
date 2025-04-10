@@ -1,9 +1,11 @@
 import PlaceForm from "../components/PlaceForm";
+import { insertPlace } from "../util/database";
 
 function AddPlaces({navigation}) {
-    function createPlaceHandler(place) {
+    async function createPlaceHandler(place) {
         // insert into DB 
         // for now we just pass this data to display it without saving
+        await insertPlace(place);
         navigation.navigate('AllPlaces', {
             place: place
         })

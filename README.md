@@ -469,3 +469,7 @@ That’s why database.transaction is undefined — you're trying to call .transa
 ## 12.215 Inserting Data into Expo SQL 52
 database.js
 - we use ? to insert dynamic data
+
+## 12.216 Inserting Places(records) into the database
+AddPlace.js
+@createPlaceHandler
