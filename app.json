@@ -46,7 +46,8 @@
         {
           "locationPermission": "Allow the app to access your location to tag favorite places on the map."
         }
-      ]
+      ],
+      "expo-sqlite"
     ]
   }
 }

@@ -441,3 +441,27 @@ AllPlaces.js
 
 ## 12.213 Styling Place Items
 PlaceItem.js
+
+## 12.214 SQLite initialization
+https://docs.expo.dev/versions/v50.0.0/sdk/sqlite/
+- runs on android and ios
+> npx expo install expo-sqlite
+create 
+util/
+database.js
+- i want you to know NOTE TODO learn SQL 
+- NOTE NB that we dont store images in the database rather we store paths
+- we execute this code in 
+App.js
+@useEffect
+- we also want to load
+> expo install expo-app-loading
+- to find out if we done we use a 
+@useState dbInitialized
+
+check this warning
+expo-app-loading is deprecated in favor of expo-splash-screen: use SplashScreen.preventAutoHideAsync() and SplashScreen.hideAsync() instead.
+
+Expo SDK 52 introduced breaking changes in how SQLite is accessed. The new openDatabaseAsync() method returns a promise, so the database you're currently assigning isn't actually the database itself, but a pending promise.
+
+That’s why database.transaction is undefined — you're trying to call .transaction() on a Promise, not the actual database instance.
