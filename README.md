@@ -433,3 +433,8 @@ PlaceForm.js
 - then we add it in 
 AddPlace.js
 @return PlaceForm
+
+## 12.212 Outputting a list of places
+AllPlaces.js
+- we want to get that data we are passing
+- and then AllPlaces fowards data to PlaceList.js
