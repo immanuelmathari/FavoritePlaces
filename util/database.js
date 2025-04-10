@@ -202,3 +202,38 @@ export async function fetchPlaces() {
 //             throw error;
 //         });
 // }
+
+// export function fetchPlaceDetails(id) {
+//     const promise = new Promise((resolve, reject) => {
+//         database.transaction((tx) => {
+//             tx.executeSql('SELECT * FROM places WHERE id = ?', [id],
+//                 (_, result) => {
+//                     console.log(result);
+//                     resolve(result.rows._array[0]);
+//                 },
+//                 (_, error) => {
+//                     reject(error);
+//                 }
+//             );
+//         });
+//     });
+// }
+
+export async function fetchPlaceDetails(id) {
+    try {
+        // Open the database
+        const database = await SQLite.openDatabaseAsync('places.db');
+
+        // Use `getFirstAsync` to fetch the first matching result
+        const result = await database.getFirstAsync('SELECT * FROM places WHERE id = ?', [id]);
+
+        // Log the result (for debugging)
+        console.log('Fetched place details:', result);
+
+        return result; 
+    } catch (error) {
+        console.error('Error fetching place details:', error);
+        throw error;
+    }
+}
+

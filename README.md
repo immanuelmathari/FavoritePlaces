@@ -512,3 +512,16 @@ we use the onPress bind
 - we then register that screen
 App.js
 - we add screen PlaceDetails
+
+## 12.219 Fetching Place Details Data from the DataBase
+database.js
+@fetchPlaceDetails
+PlaceDetails.js
+@useEffect
+- we add a state to put it in a state
+@fetchedPlace
+- we also want to update our header title so we add navigation prop in the title and setOptions. and we do it in useEffect not in useLayoutEffect because we cant set it while we are transitioning to this screen because we wount have fetched at that time
+then in 
+PlaceDetails.js
+- we set the values
+- we also add an ifcheck to see if data isset if !fetchedPlace
