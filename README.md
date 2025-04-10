@@ -494,3 +494,21 @@ we set our places like that at the
 @useEffect
 
 - but i feel like the way it was was just okay
+
+## 12.218 Adding the Place Details Screen
+PlaceDetails.js
+
+AllPlaces.js
+- we want to make sure we can navigate to a single place
+PlacesList.js
+@ PlaceItem
+- we add onSelect
+@useNavigation
+@selectPlaceHandler
+- we set up route params here coz well need them in PlaceDetails.js
+- so in PlaceList is where we call the selectPlaceHandler that needs a routeId, so we place it PlaceItem.js so here is where
+PlaceItem.js
+we use the onPress bind
+- we then register that screen
+App.js
+- we add screen PlaceDetails
