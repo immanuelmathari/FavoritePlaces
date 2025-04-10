@@ -418,3 +418,18 @@ NOTE) say you know how to handle asynchronous events
 so in 
 PlaceForm.js,
 pickLocationHandler will have the latitude and longitude coordinates and human readable address
+
+## 12.211 Passing Entered Data to the AllPlaces Screen
+AddPlace.js
+- we want to pass createPlaceHandler through props to PlaceForm so that we trigger this function
+PlaceForm.js
+@ funtion header
+@savePlaceHandler
+- our placeData should follow the structure we defined in Place.js
+Place.js 
+export it
+PlaceForm.js
+@savePlaceHandler
+- then we add it in 
+AddPlace.js
+@return PlaceForm
