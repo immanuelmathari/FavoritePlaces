@@ -52,7 +52,7 @@ function Map({navigation}){
     return (
      <MapView initialRegion={region} style={styles.map} onPress={selectedLocationHandler}>
         {selectedLocation && (
-            <Marker title="Picked Location" coordinate={{ latitude: selectedLocation.lat, longitude: selectedLocation.lng }} />
+            <Marker title="Picked Location" coordinate={{ latitude: selectedLocation.latitude, longitude: selectedLocation.longitude }} />
         )} 
     </MapView>
     )

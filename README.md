@@ -398,3 +398,23 @@ LocationPicker.js
 - all this was to help us have the functions takeImageHandler and pickLocationHandler when the user takes a photo or picks a location
 - the purpose is to have our data in place form from everywhere we get it from
 - now at savePlaceHandler we get all our data imagine
+
+## 12.210 Converting picked locations to Human-Readable Address
+- we use GeoCoding API
+- allows us to translate addresses to coordinates and coordinates to addresses the latter is called reverse geocodng
+https://developers.google.com/maps/documentation/geocoding/overview
+- enable this api
+- in console.cloud.google, make sure you enable geocoding api
+- in credentials, take the api key
+location.js
+@getAddress
+- look for reverse geocoding requests and response
+- in fetch, we get a response once the promise resolves
+LocationPicker.js
+- we want to execute this 
+@2nd UseEffect
+NOTE) say you know how to handle asynchronous events
+- so this is sent to the function that is received by onPickLocation which is in placeForm, pickLocationHandler 
+so in 
+PlaceForm.js,
+pickLocationHandler will have the latitude and longitude coordinates and human readable address
